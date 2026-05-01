@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meals</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="myFunctions.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="Home.html">الرئيسية</a>
+        <a href="AboutUs.html">من نحن</a>
+        <a href="Meals.html" class="active">الوجبات</a>
+    </nav>
+
+    <h1>قائمة الوجبات</h1>
+
+    <section class="card">
+        <p class="hint">اضغط على "عرض التفاصيل" لمشاهدة مكونات الوجبة، ثم اختر ما يناسبك من العمود الأخير وتابع الطلب.
+        </p>
+
+        <table>
+            <tr>
+                <th>الرمز</th>
+                <th>الوجبة</th>
+                <th>السعر</th>
+                <th>إظهار التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+            <tr>
+                <td>SF-001</td>
+                <td>وجبة سمك بوري مشوي</td>
+                <td>110000</td>
+                <td><input type="button" value="عرض التفاصيل" onclick="toggleDetails('d1')"></td>
+                <td><input type="checkbox" name="mealSelect" value="110000" data-name="وجبة سمك بوري مشوي"></td>
+            </tr>
+            <tr id="d1" class="details-row">
+                <td colspan="5">
+                    <p><b>المطبخ:</b> سوري متوسطي</p>
+                    <p><b>التصنيف:</b> مأكولات بحرية</p>
+                    <p><b>عدد الأشخاص:</b> 2</p>
+                    <p><b>وقت التحضير:</b> 30 دقيقة</p>
+                    <p><b>المكونات:</b> 4 سمكات بوري طازجة منظفة، أوريغانو طازج، ملح وفلفل أسود، زيت زيتون، ثوم مفروم،
+                        فلفل أحمر، إكليل الجبل، طماطم، ليمون.</p>
+                    <p><b>طريقة التقديم:</b> يقدم على طبق كبير مع الأرز بالشعيرية وسلطة طحينة وخبز عربي ساخن.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-002</td>
+                <td>وجبة دجاج مشوي</td>
+                <td>85000</td>
+                <td><input type="button" value="عرض التفاصيل" onclick="toggleDetails('d2')"></td>
+                <td><input type="checkbox" name="mealSelect" value="85000" data-name="وجبة دجاج مشوي"></td>
+            </tr>
+            <tr id="d2" class="details-row">
+                <td colspan="5">
+                    <p><b>المطبخ:</b> شامي</p>
+                    <p><b>التصنيف:</b> مشاوي</p>
+                    <p><b>عدد الأشخاص:</b> 1</p>
+                    <p><b>وقت التحضير:</b> 25 دقيقة</p>
+                    <p><b>المكونات:</b> نصف دجاجة بلدية متبّلة بالليمون والثوم والبهارات، مشوية على الفحم.</p>
+                    <p><b>طريقة التقديم:</b> يقدم مع البطاطا المقلية وكريم الثوم والمخلل وخبز عربي.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-003</td>
+                <td>بيتزا مارغريتا</td>
+                <td>50000</td>
+                <td><input type="button" value="عرض التفاصيل" onclick="toggleDetails('d3')"></td>
+                <td><input type="checkbox" name="mealSelect" value="50000" data-name="بيتزا مارغريتا"></td>
+            </tr>
+            <tr id="d3" class="details-row">
+                <td colspan="5">
+                    <p><b>المطبخ:</b> إيطالي</p>
+                    <p><b>التصنيف:</b> معجنات</p>
+                    <p><b>الحجم:</b> وسط (12 إنش)</p>
+                    <p><b>وقت التحضير:</b> 15 دقيقة</p>
+                    <p><b>المكونات:</b> عجينة إيطالية رقيقة، صلصة طماطم بالأعشاب، جبنة موزاريلا طازجة، أوراق ريحان أخضر،
+                        زيت زيتون بكر.</p>
+                    <p><b>طريقة التقديم:</b> تقدم ساخنة مع زيت زيتون وفلفل حار اختياري.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-004</td>
+                <td>شاورما عربي</td>
+                <td>45000</td>
+                <td><input type="button" value="عرض التفاصيل" onclick="toggleDetails('d4')"></td>
+                <td><input type="checkbox" name="mealSelect" value="45000" data-name="شاورما عربي"></td>
+            </tr>
+            <tr id="d4" class="details-row">
+                <td colspan="5">
+                    <p><b>المطبخ:</b> عربي</p>
+                    <p><b>التصنيف:</b> ساندويش</p>
+                    <p><b>عدد الأشخاص:</b> 1</p>
+                    <p><b>وقت التحضير:</b> 10 دقائق</p>
+                    <p><b>المكونات:</b> لحم شاورما متبّل (دجاج أو لحم بقري حسب الطلب)، صلصة طحينة أو طوم، خس، طماطم،
+                        خيار مخلل، بطاطا مقلية ملفوفة بخبز صاج.</p>
+                    <p><b>طريقة التقديم:</b> تقدم ملفوفة ومحمّصة على الصاج مع كأس عيران بارد.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-005</td>
+                <td>سلطة سيزر</td>
+                <td>35000</td>
+                <td><input type="button" value="عرض التفاصيل" onclick="toggleDetails('d5')"></td>
+                <td><input type="checkbox" name="mealSelect" value="35000" data-name="سلطة سيزر"></td>
+            </tr>
+            <tr id="d5" class="details-row">
+                <td colspan="5">
+                    <p><b>المطبخ:</b> أمريكي - إيطالي</p>
+                    <p><b>التصنيف:</b> سلطة</p>
+                    <p><b>عدد الأشخاص:</b> 1</p>
+                    <p><b>وقت التحضير:</b> 10 دقائق</p>
+                    <p><b>المكونات:</b> خس روماني طازج، قطع صدر دجاج مشوية، خبز محمص (كروتون)، جبنة بارميزان مبشورة،
+                        صلصة سيزر بالثوم والأنشوجة.</p>
+                    <p><b>طريقة التقديم:</b> تقدم باردة في طبق عميق مع شرائح ليمون.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>SF-006</td>
+                <td>سوشي</td>
+                <td>65000</td>
+                <td><input type="button" value=" عرض التفاصيل" onclick="toggleDetails('d6')"></td>
+                <td><input type="checkbox" name="mealSelect" value="65000" data-name="سوشي"></td>
+            </tr>
+            <tr id="d6" class="details-row">
+                <td colspan="5">
+                    <p><b>المطبخ:</b> ياباني</p>
+                    <p><b>التصنيف:</b> مأكولات بحرية باردة</p>
+                    <p><b>عدد القطع:</b> 8 قطع متنوعة</p>
+                    <p><b>وقت التحضير:</b> 20 دقيقة</p>
+                    <p><b>المكونات:</b> أرز سوشي ياباني، أوراق نوري، شرائح سمك السلمون والتونا، خيار، أفوكادو.</p>
+                    <p><b>طريقة التقديم:</b> يقدم بارداً مع صلصة الصويا والزنجبيل المخلل وعجينة الواسابي وأعواد الأكل.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <div class="actions">
+            <button onclick="showForm()">متابعة</button>
+        </div>
+    </section>
+
+    <div id="orderForm" class="card">
+        <h2>نموذج الطلب</h2>
+        <form onsubmit="return submitOrder()">
+            <label>الاسم الكامل (إنكليزي - مثال: Ahmad Mohammad):</label>
+            <input type="text" id="fullName">
+
+            <label>رقم الحساب المصرفي (مطلوب - 6 خانات):</label>
+            <input type="text" id="bankAcc" placeholder="055555">
+
+            <label>تاريخ الطلب (dd-mm-yyyy):</label>
+            <input type="text" id="orderDate" placeholder="29-04-2026">
+
+            <label>رقم الموبايل (Syriatel أو MTN):</label>
+            <input type="text" id="mobileNum" placeholder="0944123456">
+
+            <div class="actions">
+                <input type="submit" value="إرسال">
+                <input type="button" class="btn-cancel" value="إلغاء" onclick="hideForm()">
+            </div>
+        </form>
+    </div>
+
+    <div id="orderOverlay" class="modal-overlay" style="display:none">
+        <div class="modal">
+            <h2>تم استلام طلبكم بنجاح</h2>
+            <p><b>الاسم:</b> <span id="resName">-</span></p>
+            <p><b>رقم الحساب:</b> <span id="resBank">-</span></p>
+            <p><b>تاريخ الطلب:</b> <span id="resDate">-</span></p>
+            <p><b>رقم الموبايل:</b> <span id="resMobile">-</span></p>
+
+            <h3>الوجبات المختارة</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>الوجبة</th>
+                        <th>السعر</th>
+                    </tr>
+                </thead>
+                <tbody id="resMeals"></tbody>
+            </table>
+
+            <p>المبلغ الإجمالي: <span id="resTotal">0</span> ل.س</p>
+            <p>الضريبة (10%): <span id="resTax">0</span> ل.س</p>
+            <p class="net">المبلغ الصافي بعد الضريبة: <span id="resNet">0</span> ل.س</p>
+
+            <div class="actions">
+                <button onclick="hideResult()">إغلاق</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+</body>
+
+</html>
